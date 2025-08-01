@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" verbose="1" parallel="tests" thread-count="2">
+<suite name="Suite_POM" verbose="1" parallel="tests" thread-count="2">
 	<listeners>
         <listener class-name="org.testng.reporters.TestHTMLReporter"/>
     </listeners>
@@ -8,7 +8,7 @@
 	    <parameter name="browser" value="firefox"/>
 	    <parameter name="gridUrl" value="http://localhost:4444/wd/hub"/>
         <classes>
-            <class name="com.selenium.javier.InicioSesionTest"/>
+            <class name="com.selenium.javier.LoginTest"/>
         </classes>
     </test>
     

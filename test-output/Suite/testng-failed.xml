@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="tests" name="Failed suite [Suite]">
-  <parameter name="browser" value="chrome"/>
-  <parameter name="gridUrl" value="http://localhost:4444/wd/hub"/>
   <listeners>
     <listener class-name="org.testng.reporters.TestHTMLReporter"/>
   </listeners>
-  <test thread-count="2" parallel="tests" name="CarritoCompras(failed)">
+  <test thread-count="2" parallel="tests" name="CarritoComprasChrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="gridUrl" value="http://localhost:4444/wd/hub"/>
     <classes>
       <class name="com.selenium.distribuido.CarritoComprasSauce">
         <methods>
@@ -16,5 +16,5 @@
         </methods>
       </class> <!-- com.selenium.distribuido.CarritoComprasSauce -->
     </classes>
-  </test> <!-- CarritoCompras(failed) -->
+  </test> <!-- CarritoComprasChrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

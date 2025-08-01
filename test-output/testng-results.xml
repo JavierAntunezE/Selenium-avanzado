@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Cierra navegador]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-08-01T15:10:56 GMT-04:00" name="Suite" finished-at="2025-08-01T15:11:12 GMT-04:00" duration-ms="16011">
+  <suite started-at="2025-08-01T19:49:14 GMT-04:00" name="Suite" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="12929">
     <groups>
     </groups>
-    <test started-at="2025-08-01T15:10:56 GMT-04:00" name="CarritoCompras" finished-at="2025-08-01T15:11:12 GMT-04:00" duration-ms="16011">
-      <class name="com.selenium.distribuido.CarritoComprasSauce">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.selenium.distribuido.CarritoComprasSauce@3eb25e1a]" started-at="2025-08-01T15:10:56 GMT-04:00" name="setup" finished-at="2025-08-01T15:11:06 GMT-04:00" duration-ms="9799" status="PASS">
+    <test started-at="2025-08-01T19:49:14 GMT-04:00" name="CarritoComprasFirefox" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="12929">
+      <class name="com.selenium.javier.InicioSesionTest">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:15 GMT-04:00" name="setup" finished-at="2025-08-01T19:49:25 GMT-04:00" duration-ms="9976" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -26,18 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:com.selenium.distribuido.CarritoComprasSauce@3eb25e1a]" started-at="2025-08-01T15:11:06 GMT-04:00" name="loginTest" finished-at="2025-08-01T15:11:10 GMT-04:00" duration-ms="4185" status="PASS">
+        <test-method signature="loginTest()[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:25 GMT-04:00" name="loginTest" finished-at="2025-08-01T19:49:26 GMT-04:00" duration-ms="1016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.selenium.distribuido.CarritoComprasSauce@3eb25e1a]" started-at="2025-08-01T15:11:10 GMT-04:00" name="teardown" finished-at="2025-08-01T15:11:12 GMT-04:00" duration-ms="1890" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:26 GMT-04:00" name="teardown" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="1809" status="PASS">
           <reporter-output>
-            <line>
-              <![CDATA[Cierra navegador]]>
-            </line>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.selenium.distribuido.CarritoComprasSauce -->
-    </test> <!-- CarritoCompras -->
+      </class> <!-- com.selenium.javier.InicioSesionTest -->
+    </test> <!-- CarritoComprasFirefox -->
   </suite> <!-- Suite -->
 </testng-results>
