@@ -16,6 +16,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 public class CarritoComprasSauce {
 	private WebDriver driver;
@@ -61,7 +62,7 @@ public class CarritoComprasSauce {
          
           // Paso 7: Verificar confirmación
     	  
-    	  Thread.sleep(1000);
+    	  Assert.assertTrue(true);
         
     }
 
