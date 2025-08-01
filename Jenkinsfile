@@ -11,11 +11,11 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
+        /*stage('Checkout') {
             steps {
                 git branch: 'develop', url: 'https://github.com/JavierAntunezE/Selenium-avanzado.git'
             }
-        }
+        }*/
 
         stage('Build') {
             steps {
