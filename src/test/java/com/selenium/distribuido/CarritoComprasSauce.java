@@ -36,9 +36,9 @@ public class CarritoComprasSauce {
 
 	@Test
 	public void loginTest() throws InterruptedException {
-		Reporter.log("=== INICIANDO TEST DE CARRITO ===");
+		Reporter.log("=== INICIANDO TEST DE CARRITO ===",true);
 		driver.get("https://www.saucedemo.com/");
-		Reporter.log("URL cargada: " + driver.getCurrentUrl());
+		Reporter.log("URL cargada: " + driver.getCurrentUrl(),true);
 
 		// Paso 1: Login
 
