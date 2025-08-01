@@ -22,55 +22,51 @@ public class CarritoComprasSauce {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-    @Parameters({"browser", "gridUrl"})
-    @BeforeClass
-    public void setup(String browser, String gridUrl) throws Exception {
-    	DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setBrowserName(browser);
-        driver = new RemoteWebDriver(new URL(gridUrl), caps);
-        //driver.manage().window().maximize();
-        // Puedes agregar Firefox u otro navegador aquí
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+	@Parameters({ "browser", "gridUrl" })
+	@BeforeClass
+	public void setup(String browser, String gridUrl) throws Exception {
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setBrowserName(browser);
+		driver = new RemoteWebDriver(new URL(gridUrl), caps);
+		// driver.manage().window().maximize();
+		// Puedes agregar Firefox u otro navegador aquí
+		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
 
-    @Test
-    public void loginTest() throws InterruptedException {
-    	  driver.get("https://www.saucedemo.com/");
+	@Test
+	public void loginTest() throws InterruptedException {
+		System.out.println("=== INICIANDO TEST DE CARRITO ===");
+		driver.get("https://www.saucedemo.com/");
+		System.out.println("URL cargada: " + driver.getCurrentUrl());
 
-    	// Paso 1: Login
-         
+		// Paso 1: Login
 
-          // Verificar que estamos en la página de inventario
-         
+		// Verificar que estamos en la página de inventario
 
-          // Paso 2: Agregar productos
-         
+		// Paso 2: Agregar productos
 
-          // Verificar el contador del carrito
-         
+		// Verificar el contador del carrito
 
-          // Paso 3: Ir al carrito
-          
+		// Paso 3: Ir al carrito
 
-          // Paso 4: Checkout
-         
+		// Paso 4: Checkout
 
-          // Paso 5: Llenar formulario
-          
+		// Paso 5: Llenar formulario
 
-          // Paso 6: Finalizar compra
-         
-          // Paso 7: Verificar confirmación
-    	  
-    	  System.out.println("Se ejecuta la prueba correctamente");
-    	  Assert.assertTrue(true);
-        
-    }
+		// Paso 6: Finalizar compra
 
-    @AfterClass
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
+		// Paso 7: Verificar confirmación
+
+		
+		Assert.assertTrue(true);
+		System.out.println("Se ejecuta la prueba correctamente");
+
+	}
+
+	@AfterClass
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 }
