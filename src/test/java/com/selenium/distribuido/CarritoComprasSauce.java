@@ -7,6 +7,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -40,9 +42,22 @@ public class CarritoComprasSauce {
 		driver.get("https://www.saucedemo.com/");
 		Reporter.log("URL cargada: " + driver.getCurrentUrl(),true);
 
+<<<<<<< Updated upstream
 		// Paso 1: Login
 
 		// Verificar que estamos en la página de inventario
+=======
+    	// Paso 1: Login
+    	  WebDriver driver;
+    	  ChromeOptions options = new ChromeOptions();
+    	  driver = new ChromeDriver(options);
+
+          // Verificar que estamos en la página de inventario
+    	  WebElement texto = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("sampleHeading")));
+          String headingText = texto.getText();
+          System.out.println("Texto del heading: " + headingText);
+          Assert.assertEquals(headingText, "This is a sample page");
+>>>>>>> Stashed changes
 
 		// Paso 2: Agregar productos
 
