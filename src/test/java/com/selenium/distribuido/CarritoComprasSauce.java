@@ -60,6 +60,8 @@ public class CarritoComprasSauce {
           // Paso 6: Finalizar compra
          
           // Paso 7: Verificar confirmación
+    	  
+    	  Thread.sleep(1000);
         
     }
 
