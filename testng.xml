@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" parallel="tests" thread-count="2">
+	<listeners>
+	    <listener class-name="org.testng.reporters.XMLReporter"/>
+	    <listener class-name="org.testng.reporters.SuiteHTMLReporter"/>
+	  </listeners>
     <parameter name="browser" value="chrome"/>
     <parameter name="gridUrl" value="http://localhost:4444/wd/hub"/>
     

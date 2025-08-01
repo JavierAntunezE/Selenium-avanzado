@@ -38,8 +38,8 @@ pipeline {
         stage('Publicar Reportes') {
             steps {
 		        publishHTML([ 
-		            reportDir: 'target/site', //Carpeta donde Jenkins buscará el archivo HTML
-		            reportFiles: 'surefire-report.html', //El archivo(s) HTML a mostrar. (TestNG genera un index.html)
+		            reportDir: 'test-output', //Carpeta donde Jenkins buscará el archivo HTML
+		            reportFiles: 'index.html', //El archivo(s) HTML a mostrar. (TestNG genera un index.html)
 		            reportName: 'Reporte TestNG', //Nombre que aparecerá en Jenkins para el reporte
 		            allowMissing: false, //Si el archivo no se encuentra, falla el build. Si lo pones en true, solo muestra advertencia
 		            alwaysLinkToLastBuild: true, //Si true, crea un enlace en Jenkins al último reporte disponible, útil para acceso rápido.
