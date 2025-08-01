@@ -31,10 +31,14 @@ pipeline {
 
         stage('Publicar Reportes') {
             steps {
-                publishTestNGResults testResultsPattern: '**/test-output/testng-results.xml'
-            }
+		        publishHTML([ 
+		            reportDir: 'test-output', 
+		            reportFiles: 'index.html', 
+		            reportName: 'Reporte TestNG'
+		        ])
+		    }
         }
-    }
+	}
 
     post {
         always {
