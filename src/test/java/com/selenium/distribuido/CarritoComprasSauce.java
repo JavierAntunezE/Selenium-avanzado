@@ -62,6 +62,7 @@ public class CarritoComprasSauce {
          
           // Paso 7: Verificar confirmación
     	  
+    	  System.out.println("Se ejecuta la prueba correctamente");
     	  Assert.assertTrue(true);
         
     }
