@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/JavierAntunezE/Selenium-avanzado.git'
+                git branch: 'develop', url: 'https://github.com/JavierAntunezE/Selenium-avanzado.git'
             }
         }
 
