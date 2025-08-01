@@ -32,9 +32,12 @@ pipeline {
         stage('Publicar Reportes') {
             steps {
 		        publishHTML([ 
-		            reportDir: 'test-output', 
-		            reportFiles: 'index.html', 
-		            reportName: 'Reporte TestNG'
+		            reportDir: 'test-output', //Carpeta donde Jenkins buscará el archivo HTML
+		            reportFiles: 'index.html', //El archivo(s) HTML a mostrar. Por lo general, TestNG genera un index.html
+		            reportName: 'Reporte TestNG', //Nombre que aparecerá en Jenkins para el reporte
+		            allowMissing: false, //Si el archivo no se encuentra, falla el build. Si lo pones en true, solo muestra advertencia
+		            alwaysLinkToLastBuild: true, //Si true, crea un enlace en Jenkins al último reporte disponible, útil para acceso rápido.
+		            keepAll: true //Si true, guarda el reporte HTML para cada ejecución del Job, no solo el último.
 		        ])
 		    }
         }
