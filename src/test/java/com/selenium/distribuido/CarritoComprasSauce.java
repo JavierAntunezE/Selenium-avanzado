@@ -12,6 +12,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -35,9 +36,9 @@ public class CarritoComprasSauce {
 
 	@Test
 	public void loginTest() throws InterruptedException {
-		System.out.println("=== INICIANDO TEST DE CARRITO ===");
+		Reporter.log("=== INICIANDO TEST DE CARRITO ===");
 		driver.get("https://www.saucedemo.com/");
-		System.out.println("URL cargada: " + driver.getCurrentUrl());
+		Reporter.log("URL cargada: " + driver.getCurrentUrl());
 
 		// Paso 1: Login
 
@@ -59,7 +60,7 @@ public class CarritoComprasSauce {
 
 		
 		Assert.assertTrue(true);
-		System.out.println("Se ejecuta la prueba correctamente");
+		Reporter.log("Se ejecuta la prueba correctamente",true);
 
 	}
 
