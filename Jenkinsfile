@@ -38,7 +38,7 @@ pipeline {
         stage('Publicar Reportes') {
             steps {
 		        publishHTML([ 
-		            reportDir: 'test-output', //Carpeta donde Jenkins buscará el archivo HTML
+		            reportDir: 'target/surefire-reports', //Carpeta donde Jenkins buscará el archivo HTML
 		            reportFiles: 'index.html', //El archivo(s) HTML a mostrar. (TestNG genera un index.html)
 		            reportName: 'Reporte TestNG', //Nombre que aparecerá en Jenkins para el reporte
 		            allowMissing: false, //Si el archivo no se encuentra, falla el build. Si lo pones en true, solo muestra advertencia
@@ -47,11 +47,33 @@ pipeline {
 		        ])
 		    }
         }
+        /* OPCIÓN B: Usar reportes nativos de TestNG
+        stage('Publicar Reportes TestNG') {
+            steps {
+                publishHTML([
+                    reportDir: 'test-output',
+                    reportFiles: 'index.html',
+                    reportName: 'Reporte TestNG Nativo',
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true
+                ])
+            }
+        }
+        */
 	}
 
     post {
         always {
+            // Archivar ambos tipos de reportes
+            archiveArtifacts artifacts: '**/target/surefire-reports/**', allowEmptyArchive: true
             archiveArtifacts artifacts: '**/test-output/**', allowEmptyArchive: true
+        }
+        success {
+            echo 'Pipeline ejecutado exitosamente!'
+        }
+        failure {
+            echo 'Pipeline falló - revisar logs'
         }
     }
 }
