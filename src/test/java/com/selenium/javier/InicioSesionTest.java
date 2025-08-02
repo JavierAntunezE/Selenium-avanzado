@@ -12,11 +12,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.selenium.javier.paginas.AgregarProductosCarrito;
 import com.selenium.javier.paginas.InicioSesionPage;
 
 public class InicioSesionTest {
 
 	InicioSesionPage inicioSesionPage;
+	AgregarProductosCarrito agregarProductosCarrito;
 	private WebDriver driver;
 	
 	@Parameters({ "browser", "gridUrl" })
@@ -29,7 +31,11 @@ public class InicioSesionTest {
 			
 			driver.get("https://www.saucedemo.com/");
 			
+			//instancias
 			inicioSesionPage = new InicioSesionPage(driver);
+			agregarProductosCarrito = new AgregarProductosCarrito(driver);
+			
+			
 		} catch (Exception e) {
 			// TODO: handle exception
 			System.out.println("Error setup: " + e.getMessage());
@@ -37,7 +43,7 @@ public class InicioSesionTest {
 
 	}
 
-	@Test
+	@Test (priority = 1)
 	public void loginTest() {
 		try {
 			//Logica
@@ -54,6 +60,26 @@ public class InicioSesionTest {
 			System.out.println("Error: " + e.getMessage());
 		}
 	}
+	
+	
+	@Test(priority = 2)
+	public void agregarCarrito() {
+		try {	
+						
+			agregarProductosCarrito.AgregarProducto();
+			agregarProductosCarrito.IrCarrito();
+			boolean esExitoso = agregarProductosCarrito.ValidarPagina();
+			
+			Assert.assertEquals(esExitoso, true);
+			Thread.sleep(2000);
+			System.out.print("Correcto aca ya agrego al carrito");
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Error: " + e.getMessage());
+		}
+	}
+	
 	
 	@AfterClass
 	public void teardown() {

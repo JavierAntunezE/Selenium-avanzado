@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
                     </span>
                     <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="com.selenium.javier.InicioSesionTest" class="method navigator-link" hash-for-method="agregarCarrito">agregarCarrito</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="com.selenium.javier.InicioSesionTest" class="method navigator-link" hash-for-method="loginTest">loginTest</a> <!-- method navigator-link -->
@@ -124,6 +129,13 @@
               <span class="class-name">com.selenium.javier.InicioSesionTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="agregarCarrito">
+                  </a> <!-- agregarCarrito -->
+                  <span class="method-name">agregarCarrito</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="loginTest">
@@ -190,16 +202,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'com.selenium.javier.InicioSesionTest')
-data.setCell(0, 3, 1016);
+data.setCell(0, 3, 983);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'agregarCarrito')
+data.setCell(1, 2, 'com.selenium.javier.InicioSesionTest')
+data.setCell(1, 3, 81);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -232,11 +248,15 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginTest</span>
-                <span class="method-start">10011 ms</span>
+                <span class="method-start">8773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">agregarCarrito</span>
+                <span class="method-start">9772 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">11038 ms</span>
+                <span class="method-start">9855 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-01T19:49:14 GMT-04:00" name="Suite" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="12929">
+  <suite started-at="2025-08-01T21:13:39 GMT-04:00" name="Suite" finished-at="2025-08-01T21:13:50 GMT-04:00" duration-ms="11458">
     <groups>
     </groups>
-    <test started-at="2025-08-01T19:49:14 GMT-04:00" name="CarritoComprasFirefox" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="12929">
+    <test started-at="2025-08-01T21:13:39 GMT-04:00" name="CarritoComprasFirefox" finished-at="2025-08-01T21:13:50 GMT-04:00" duration-ms="11458">
       <class name="com.selenium.javier.InicioSesionTest">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:15 GMT-04:00" name="setup" finished-at="2025-08-01T19:49:25 GMT-04:00" duration-ms="9976" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:com.selenium.javier.InicioSesionTest@3eb25e1a]" started-at="2025-08-01T21:13:39 GMT-04:00" name="setup" finished-at="2025-08-01T21:13:48 GMT-04:00" duration-ms="8736" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="loginTest()[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:25 GMT-04:00" name="loginTest" finished-at="2025-08-01T19:49:26 GMT-04:00" duration-ms="1016" status="PASS">
+        <test-method signature="loginTest()[pri:1, instance:com.selenium.javier.InicioSesionTest@3eb25e1a]" started-at="2025-08-01T21:13:48 GMT-04:00" name="loginTest" finished-at="2025-08-01T21:13:49 GMT-04:00" duration-ms="983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.selenium.javier.InicioSesionTest@6743e411]" started-at="2025-08-01T19:49:26 GMT-04:00" name="teardown" finished-at="2025-08-01T19:49:27 GMT-04:00" duration-ms="1809" status="PASS">
+        <test-method signature="agregarCarrito()[pri:2, instance:com.selenium.javier.InicioSesionTest@3eb25e1a]" started-at="2025-08-01T21:13:49 GMT-04:00" name="agregarCarrito" finished-at="2025-08-01T21:13:49 GMT-04:00" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- agregarCarrito -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.selenium.javier.InicioSesionTest@3eb25e1a]" started-at="2025-08-01T21:13:49 GMT-04:00" name="teardown" finished-at="2025-08-01T21:13:50 GMT-04:00" duration-ms="1554" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
